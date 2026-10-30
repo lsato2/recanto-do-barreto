@@ -221,6 +221,13 @@ a { color: inherit; }
   border: 1.5px solid #E5DCCB; background: var(--areia); width: 100%; transition: border .2s, background .2s;
 }
 .campo input:focus, .campo select:focus, .campo textarea:focus { outline: none; border-color: var(--agua); background: #fff; }
+.campo, .campo-duplo > * { min-width: 0; }
+/* Safari iOS: campo de data ignora width e centraliza o texto */
+.campo input[type="date"] {
+  -webkit-appearance: none; appearance: none; display: block;
+  min-width: 0; max-width: 100%; min-height: 3.1em; text-align: left;
+}
+.campo input[type="date"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
 .campo--check { flex-direction: row; align-items: center; gap: 10px; }
 .campo--check input { width: 20px; height: 20px; accent-color: var(--agua); flex-shrink: 0; }
 .campo--check label { font-weight: 600; }
