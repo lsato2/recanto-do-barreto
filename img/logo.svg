@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-label="Recanto do Barreto">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&amp;family=Manrope:wght@700&amp;display=swap');
+    .r { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 50px; fill: #4A3328; }
+    .b { font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 6.4px; fill: #1C7FC4; }
+  </style>
+  <defs>
+    <clipPath id="horizonte"><rect x="0" y="0" width="96" height="64"/></clipPath>
+  </defs>
+  <g transform="translate(4 4) scale(1.375)">
+    <path d="M7 29 L32 9 L57 29" fill="none" stroke="#4A3328" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="38" r="11" fill="#F2A922" clip-path="url(#horizonte)"/>
+    <path d="M8 46 q6 -5 12 0 t12 0 t12 0 t12 0" fill="none" stroke="#1C7FC4" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M15 55 q5.5 -4.5 11 0 t11 0 t11 0" fill="none" stroke="#4FB9EA" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+  <text class="r" x="104" y="54">Recanto</text>
+  <text class="b" x="106" y="80">DO BARRETO</text>
+</svg>
