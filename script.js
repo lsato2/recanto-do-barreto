@@ -119,7 +119,14 @@ const saida = document.getElementById('saida');
 const hoje = new Date();
 hoje.setMinutes(hoje.getMinutes() - hoje.getTimezoneOffset());
 entrada.min = hoje.toISOString().slice(0, 10);
-entrada.addEventListener('change', () => { saida.min = entrada.value; });
+// O calendário do celular abre na data atual do campo; sem valor, abre em hoje.
+// Por isso a saída acompanha a entrada sempre que estiver vazia ou antes dela.
+const sincronizarSaida = () => {
+  saida.min = entrada.value;
+  if (entrada.value && (!saida.value || saida.value < entrada.value)) saida.value = entrada.value;
+};
+entrada.addEventListener('change', sincronizarSaida);
+entrada.addEventListener('input', sincronizarSaida);
 
 const DIAS_SEMANA = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
 const paraData = (iso) => { const [a, m, d] = iso.split('-').map(Number); return new Date(a, m - 1, d); };
