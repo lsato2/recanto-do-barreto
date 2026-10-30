@@ -140,21 +140,22 @@ form.addEventListener('submit', (e) => {
   const faltando = [];
   if (!d.nome.trim()) faltando.push('seu nome');
   if (!d.entrada) faltando.push('a data de entrada');
+  if (!d.saida) faltando.push('a data de saída');
   if (!d.pessoas || Number(d.pessoas) < 1) faltando.push('o número de pessoas');
   if (faltando.length) {
     erro.textContent = `Preencha ${faltando.join(', ')}.`;
     erro.hidden = false;
     return;
   }
-  if (d.saida && d.saida < d.entrada) {
-    erro.textContent = 'A data de saída precisa ser depois da entrada.';
+  if (d.saida < d.entrada) {
+    erro.textContent = 'A data de saída não pode ser antes da entrada.';
     erro.hidden = false;
     return;
   }
   erro.hidden = true;
 
-  const dias = d.saida ? totalDias(d.entrada, d.saida) : 1;
-  const periodo = d.saida && d.saida !== d.entrada
+  const dias = totalDias(d.entrada, d.saida);
+  const periodo = d.saida !== d.entrada
     ? `${dataBR(d.entrada)} até ${dataBR(d.saida)}`
     : dataBR(d.entrada);
 
