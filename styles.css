@@ -236,6 +236,9 @@ a { color: inherit; }
 /* Localização */
 .local { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(30px, 6vw, 70px); align-items: center; }
 .local__texto p:not(.sobretitulo) { color: var(--texto-suave); font-size: 1.05rem; margin-bottom: 1.6rem; }
+.local__cidade { font-family: var(--fonte-titulo); font-size: 1.35rem !important; color: var(--terra) !important; margin-bottom: .6rem !important; }
+.local__acoes { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn--contorno { background: transparent; color: var(--terra); border: 2px solid var(--terra); }
 .local__mapa { position: relative; border-radius: 24px; overflow: hidden; box-shadow: var(--sombra); aspect-ratio: 4/3; background: var(--areia); }
 .local__mapa iframe { position: relative; width: 100%; height: 100%; border: 0; display: block; }
 .local__reserva {
