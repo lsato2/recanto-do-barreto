@@ -1,6 +1,6 @@
 // ===== Configuração =====
 // Número do WhatsApp com DDI + DDD, só dígitos (ex.: 5543999998888)
-const WHATSAPP = '5544988313070'; // TESTE: número correto é 5544998731002
+const WHATSAPP = '5544998731002';
 
 const FOTOS = [
   { arquivo: 'IMG_7170', cat: 'piscina', legenda: 'Piscina com deck de pedra', grande: true },
